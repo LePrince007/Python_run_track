@@ -49,6 +49,17 @@ else:
     print('Le nombre est impair')
 """
 # ************** Exercice 7 ***************
+nombre = 2  # On commence à 2 car 1 n'est pas un nombre premier
+while nombre <= 1000:
+    est_premier = True  # On suppose que le nombre est premier
+    for i in range(2, int(nombre ** 0.5) + 1):  # On vérifie les diviseurs jusqu'à la racine carrée
+        if nombre % i == 0:  # Si divisible par un autre nombre, il n'est pas premier
+            est_premier = False
+            break
+    if est_premier:
+        print(nombre)
+    nombre += 1
+
 
 
 
